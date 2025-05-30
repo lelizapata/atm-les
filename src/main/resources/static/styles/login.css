@@ -1,0 +1,70 @@
+body {
+    background: linear-gradient(to right, #f3d1f4, #cde5fb); /* degradado rosado a azul pastel */
+    font-family: 'Poppins', sans-serif;
+}
+
+.login-container {
+    max-width: 400px;
+    margin: 80px auto;
+    background: white;
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+h2 {
+    color: #c084fc; /* lavanda/morado pastel */
+    text-align: center;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+label {
+    color: #7c7c7c;
+    margin-top: 10px;
+    font-weight: 500;
+}
+
+.form-control {
+    border-radius: 10px;
+    padding: 10px;
+    border: 1px solid #d8b4f8;
+    font-size: 15px;
+}
+
+button[type="submit"] {
+    background: #c084fc;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    margin-top: 20px;
+    width: 100%;
+    padding: 10px;
+    font-weight: bold;
+    font-size: 15px;
+    transition: background 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    background: #a76fea;
+}
+
+.links a {
+    display: block;
+    text-align: center;
+    margin-top: 15px;
+    color: #a974e6;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.links a:hover {
+    text-decoration: underline;
+}
+
+.error-message {
+    color: #e6537d; /* tono rosado suave para errores */
+    text-align: center;
+    margin-top: 10px;
+    font-weight: 600;
+}

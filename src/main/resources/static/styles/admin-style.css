@@ -1,0 +1,314 @@
+body {
+    background-color: #f8f9fa;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-style: italic;
+}
+.card-header.bg-custom.text-white.text-center {
+    font-style: normal; /* quita cursiva */
+    font-weight: 1000px;   /* negrita */
+}
+.card-header h3 {
+    font-size: 1.8rem; /* más grande aún */
+}
+.card {
+    border-radius: 24px;
+    height: auto;
+}
+.card-header {
+    border-top-left-radius: 50rem;
+    border-top-right-radius: 42rem;
+}
+.card-shadow .bg-custom {
+    background-color: rgb(197, 33, 197);
+
+}
+.card-body {
+    font-style: oblique;
+}
+.btn-success {
+    background-color: #198754;
+    border: none;
+}
+.bg-custom {
+    background-color: #cc00ff; 
+}
+
+.btn-success:hover {
+    background-color: #2541b0;
+}
+.text-success, .text-danger {
+    font-weight: bold;
+}
+.message {
+    margin-top: 1rem;
+    padding: 0.5rem 1rem;
+    border-radius: 0.375rem;
+}
+.message.success {
+    background-color: #9c2163;
+    color: #0f5132;
+    border: 1px solid #badbcc;
+}
+.message.error {
+    background-color: #f8d7da;
+    color: #842029;
+    border: 1px solid #f5c2c7;
+}
+.admin-link {
+    color: #6c757d; /* gris oscuro (puedes cambiarlo) */
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.admin-link i {
+    color: #cc00ff; /* ícono mismo color */
+}
+
+.admin-link:hover {
+    color: #cc00ff;
+}
+
+.admin-link:hover i {
+    color: #4f20db;
+}
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #004a99;
+    color: white;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+}
+
+h2 {
+    color: #ffcc00;
+    margin-bottom: 30px;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 24px;
+}
+
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    width: 80%;
+    max-width: 600px;
+    margin-bottom: 30px;
+}
+
+.menu-item {
+    background-color: #0066cc;
+    border: 2px solid #ffcc00;
+    border-radius: 10px;
+    padding: 20px 10px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-decoration: none;
+    color: white;
+    text-transform: uppercase;
+}
+
+.menu-item:hover {
+    background-color: #ffcc00;
+    color: #004a99;
+    transform: scale(1.05);
+}
+
+.menu-item i {
+    margin-bottom: 8px;
+    font-size: 24px;
+}
+
+.logout-btn {
+    background-color: #cc0000;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    text-decoration: none;
+    margin-top: 20px;
+    transition: background-color 0.3s;
+    text-transform: uppercase;
+}
+
+.logout-btn:hover {
+    background-color: #ff3333;
+}
+
+/* Estilos generales para todas las vistas del cajero */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #004a99;
+    color: white;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+}
+
+h1, h2 {
+    color: #ffcc00;
+    margin-bottom: 30px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.container {
+    background-color: #0066cc;
+    border: 2px solid #ffcc00;
+    border-radius: 10px;
+    padding: 30px;
+    width: 90%;
+    max-width: 600px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin-bottom: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="number"],
+select {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #ffcc00;
+    border-radius: 5px;
+    background-color: #f8f8f8;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+button[type="submit"],
+.btn-primary {
+    background-color: #ffcc00;
+    color: #004a99;
+    border: none;
+    padding: 12px;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 16px;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: background-color 0.3s;
+    width: 100%;
+    margin-top: 10px;
+}
+
+button[type="submit"]:hover,
+.btn-primary:hover {
+    background-color: #ffdd33;
+}
+
+.btn-secondary {
+    background-color: #0066cc;
+    color: white;
+    border: 2px solid #ffcc00;
+    padding: 10px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    text-align: center;
+    transition: all 0.3s;
+    display: inline-block;
+    margin-top: 15px;
+}
+
+.btn-secondary:hover {
+    background-color: #ffcc00;
+    color: #004a99;
+}
+
+/* Estilos para listas */
+ul.cuenta-list {
+    list-style: none;
+    padding: 0;
+    width: 100%;
+}
+
+ul.cuenta-list li {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Estilos para tablas */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+table th {
+    background-color: #ffcc00;
+    color: #004a99;
+    padding: 12px;
+    text-align: left;
+}
+
+table td {
+    padding: 10px;
+    border-bottom: 1px solid rgba(255, 204, 0, 0.3);
+}
+
+table tr:hover {
+    background-color: rgba(255, 204, 0, 0.1);
+}
+
+/* Mensajes */
+.mensaje-exito {
+    color: #66ff66;
+    font-weight: bold;
+    text-align: center;
+    margin: 15px 0;
+}
+
+.mensaje-error {
+    color: #ff6666;
+    font-weight: bold;
+    text-align: center;
+    margin: 15px 0;
+}
+
+/* Información adicional */
+.info-text {
+    font-style: italic;
+    margin-left: 10px;
+    font-weight: bold;
+    color: #ffcc00;
+}
+
