@@ -12,14 +12,14 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
-import com.bangroseron.atm.dto.TransferenciaForm;
-import com.bangroseron.atm.entity.Cliente;
-import com.bangroseron.atm.entity.Cuenta;
-import com.bangroseron.atm.repository.CuentaRepository;
-import com.bangroseron.atm.services.ClienteService;
-import com.bangroseron.atm.services.CuentaService;
-import com.bangroseron.atm.services.MovimientoService;
-import com.bangroseron.atm.services.RetiroService;
+import com.cajerodeleli.atm.dto.TransferenciaForm;
+import com.cajerodeleli.atm.entity.Cliente;
+import com.cajerodeleli.atm.entity.Cuenta;
+import com.cajerodeleli.atm.repository.CuentaRepository;
+import com.cajerodeleli.atm.service.ClienteService;
+import com.cajerodeleli.atm.service.CuentaService;
+import com.cajerodeleli.atm.service.MovimientoService;
+import com.cajerodeleli.atm.service.RetiroService;
 
 import jakarta.servlet.http.HttpSession;
 import lombok.RequiredArgsConstructor;
@@ -92,17 +92,17 @@ public class CajeroController {
 
     @GetMapping("/movimientos/{numero}")
     public String movimientos(@PathVariable String numero, Model model, HttpSession session) {
-      Cliente cliente = (Cliente) session.getAttribute("cliente");
-      if (cliente == null) return "redirect:/cajero";
+    Cliente cliente = (Cliente) session.getAttribute("cliente");
+    if (cliente == null) return "redirect:/cajero";
 
-      try {
+    try {
         var movimientos = movimientoService.buscarPorCuenta(numero);
         model.addAttribute("movimientos", movimientos);
         return "cajero/movimientos";
-      } catch (Exception e) {
+    } catch (Exception e) {
         model.addAttribute("error","No fue posible obtener los movimientos: " + e.getMessage());
         return "cajero/consultas";
-      }
+    }
     }
 
     @GetMapping("/logout")
@@ -166,16 +166,16 @@ public class CajeroController {
 
     @PostMapping("/transferir")
     public String transferir(@RequestParam String numeroCuentaDestino,
-                         @RequestParam double monto,
-                         HttpSession session,
-                         Model model) {
+                        @RequestParam double monto,
+                        HttpSession session,
+                        Model model) {
     Cliente cliente = (Cliente) session.getAttribute("cliente");
     if (cliente == null) return "redirect:/cajero";
 
     Cuenta origen = cuentaService.buscarPorCliente(cliente)
-                                 .stream()
-                                 .findFirst()
-                                 .orElseThrow(() -> new RuntimeException("No se encontró cuenta origen"));
+                                .stream()
+                                .findFirst()
+                                .orElseThrow(() -> new RuntimeException("No se encontró cuenta origen"));
 
     try {
         Cuenta destino = cuentaService.buscarPorNumero(numeroCuentaDestino)
